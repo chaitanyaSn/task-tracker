@@ -23,8 +23,8 @@ jobs:
           cache: maven
 
       # 3️⃣ Build jar (skip tests)
-      - name: Build jar
-        run: ./mvnw clean package -DskipTests
+#      - name: Build jar
+#        run: ./mvnw clean package -DskipTests
 
       # 4️⃣ Login to Docker Hub
       - name: Login to Docker Hub

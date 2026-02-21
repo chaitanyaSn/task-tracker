@@ -23,11 +23,6 @@ public class TaskListController {
     }
 
     @GetMapping
-    public String hello() {
-        return "Hello, Task List API!";
-    }
-
-    @GetMapping
     public List<TaskListDto> listTaskLists() {
         return taskListService.listTaskLists()
                 .stream()
