@@ -33,7 +33,7 @@ public class TaskController {
     public TaskDto getTask(@PathVariable("task_list_id") UUID task_list_id, @PathVariable("task_id") UUID task_id) {
         return taskService.getTask(task_list_id, task_id)
                 .map(taskMapper::toDto)
-                .orElseThrow(() -> new IllegalArgumentException("Task not found with ID: " + task_id));
+                .orElseThrow(() -> new IllegalArgumentException("Task not found with id and error: " + task_id));
     }
     @PutMapping("/{task_id}")
     public TaskDto updateTask(@PathVariable("task_list_id") UUID task_list_id, @PathVariable("task_id") UUID task_id, @RequestBody TaskDto taskDto) {
